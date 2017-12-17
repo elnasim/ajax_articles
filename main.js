@@ -2,10 +2,19 @@ $(document).ready(function () {
 
   $('.nav a').on('click', function () {
     var page = $(this).attr('data-page');
+
     $.ajax({
       type: 'GET',
       url: 'data_take.php',
       data: {'page': page},
+
+      beforeSend: function () {
+        $('#loader').show();
+      },
+
+      complete: function () {
+        $('#loader').hide();
+      },
 
       success: function (data) {
         if (data !== '') {

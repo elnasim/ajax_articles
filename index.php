@@ -25,7 +25,7 @@
 </section>
 
 
-
+<div id="loader"></div>
 
 <script src="jquery.min.js"></script>
 <script src="main.js"></script>
